@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,10 +8,17 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
+    <link href="~/css/adminlte.min.css" rel="stylesheet" />
+
     <style>
         .menu-element {
             color: red;
             width: max-content;
+        }
+
+        .footer-text-element{
+            height: 30px;
+            margin: initial;
         }
     </style>
 </head>
@@ -35,16 +43,16 @@
                             <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="EuropeServices" asp-action="Index">Europe Services</a>
+                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="EuropeService" asp-action="Index">Europe Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="TurkeyServices" asp-action="Index">Turkey Services</a>
+                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="TurkeyService" asp-action="Index">Turkey Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Home" asp-action="Index">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
+                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -59,6 +67,24 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
+                <div class="row">
+                    <p id="head" class="footer-text-element">
+                        FALLING ACTION LIMITED LIABILITY COMPANY
+                    </p>
+                </div>
+                <div class="row">
+                    <p id="text" class="footer-text-element">
+                        Suadiye, Bağdat Avenue, Mücahit Street, Ark399 Plaza B Block KADIKÖY / İSTANBUL
+                    </p>
+                </div>
+                <div class="row">
+                    <p id="foot" class="footer-text-element">
+                        Copyright 2023 SAINTADVISER All Rights Reserved
+                    </p>
+                </div>
+
+                
+            
             &copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>

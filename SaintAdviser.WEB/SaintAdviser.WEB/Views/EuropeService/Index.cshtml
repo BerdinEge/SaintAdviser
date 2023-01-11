@@ -1,0 +1,80 @@
+﻿@model SaintAdviser.WEB.Models.EuropeServiceViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Europe Services</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <p>
+            Soon, we will provide many services in Europe!
+        </p>
+    </div>
+    <div class="row">
+
+        <p style="text-align: center;">
+            Please select a city that you want to be and fill your information.
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card card-danger">
+                @*<div class="card-header">
+                        <h3 class="card-title">Contact Form</h3>
+                    </div>*@
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form asp-controller="EuropeService" asp-action="Register" method="post">
+                    <div class="card-body card-danger">
+                        <div class="row">
+
+
+                            <div class="col-lg-5">
+                                <div class="form-group">
+                                    <div class="form-group">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2">
+
+                            </div>
+
+                            <div class="col-lg-5">
+
+                                <div class="form-group">
+                                    <label for="CompanyNameTB">Company Name</label>
+                                    @Html.TextBoxFor(m => m.CompanyName, new { type = "text", id = "CompanyNameTB", @class = "form-control ", placeholder = "Enter company name" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="EmailTB">Email address</label>
+                                    @Html.TextBoxFor(m => m.Email, new { type = "email", id = "EmailTB", @class = "form-control ", placeholder = "Enter email" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="PhoneTB">Phone Number</label>
+                                    @Html.TextBoxFor(m => m.Phone, new { type = "text", id = "PhoneTB", @class = "form-control ", placeholder = "Enter phone number" })
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-danger" style="width: inherit; display: block; width: 100%;">Get An Offer</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

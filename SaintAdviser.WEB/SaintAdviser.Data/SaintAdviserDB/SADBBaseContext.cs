@@ -20,6 +20,9 @@ namespace SaintAdviser.Data.SaintAdviserDB
             modelBuilder.Entity<EuropeServiceRequest>().HasKey(c => c.Id);
             modelBuilder.Entity<EuropeServiceRequest>().ToTable("EuropeServiceRequests");
 
+            modelBuilder.Entity<Log>().HasKey(c => c.Id);
+            modelBuilder.Entity<Log>().ToTable("Logs");
+
             base.OnModelCreating(modelBuilder);
         }
 
@@ -30,5 +33,6 @@ namespace SaintAdviser.Data.SaintAdviserDB
 
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<EuropeServiceRequest> EuropeServiceRequests { get; set; }
+        public DbSet<Log> Logs { get; set; }
     }
 }

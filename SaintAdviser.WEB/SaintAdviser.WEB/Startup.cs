@@ -46,6 +46,7 @@ namespace SaintAdviser.WEB
 
             services.AddTransient<IRepContact, RepContact>();
             services.AddTransient<IRepEuropeServiceRequest, RepEuropeServiceRequest>();
+            services.AddTransient<IRepLog, RepLog>();
 
             services.AddControllersWithViews();
         }

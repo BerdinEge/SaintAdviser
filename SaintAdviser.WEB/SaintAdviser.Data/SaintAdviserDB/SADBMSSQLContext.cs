@@ -31,6 +31,9 @@ namespace SaintAdviser.Data.SaintAdviserDB
             modelBuilder.Entity<Contact>().Property(c => c.Description).HasColumnType("nvarchar(max)");
 
             modelBuilder.Entity<EuropeServiceRequest>().Property(c => c.CityState).HasColumnType("nvarchar(max)");
+
+            modelBuilder.Entity<Log>().Property(c => c.Detail).HasColumnType("nvarchar(max)");
+            modelBuilder.Entity<Log>().Property(c => c.Request).HasColumnType("nvarchar(max)");
         }
     }
 }
