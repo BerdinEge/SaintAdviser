@@ -16,6 +16,10 @@ namespace SaintAdviser.WEB.Models
         public string Phone { get; set; }
         //public string WebPage { get; set; }
         public string Description { get; set; }
-        
+        public bool FrankfurtRB { get; set; } = false;
+        public bool MadridRB { get; set; } = false;
+        public bool ParisRB { get; set; } = false;
+        public bool MilanoRB { get; set; } = false;
+
     }
 }

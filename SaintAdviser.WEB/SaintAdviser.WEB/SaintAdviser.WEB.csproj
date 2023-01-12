@@ -18,4 +18,8 @@
     <ProjectReference Include="..\SaintAdviser.Entity\SaintAdviser.Entity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>

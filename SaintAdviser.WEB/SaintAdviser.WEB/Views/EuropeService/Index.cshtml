@@ -36,10 +36,26 @@
 
                             <div class="col-lg-5">
                                 <div class="form-group">
-                                    <div class="form-group">
-
-                                    </div>
+                                    @*<label style="visibility: hidden;"></label>*@
+                                    @Html.CheckBoxFor(m => m.FrankfurtRB, new { id = "FrankfurtRB", type = "checkbox", @style= "visibility: hidden;" })
+                                    <input type="button" class="btn btn-default selectbtn" id="Frankfurt" value="Frankfurt - Germany" />
                                 </div>
+                                <div class="form-group">
+                                    @*<label style="visibility: hidden;"></label>*@
+                                    @Html.CheckBoxFor(m => m.MadridRB, new { id = "MadridRB", type = "checkbox", @style = "visibility: hidden;" })
+                                    <input type="button" class="btn btn-default selectbtn" id="Madrid" value="Madrid - Spain" />
+                                </div>
+                                <div class="form-group">
+                                    @*<label style="visibility: hidden;"></label>*@
+                                    @Html.CheckBoxFor(m => m.ParisRB, new { id = "ParisRB", type = "checkbox", @style = "visibility: hidden;" })
+                                    <input type="button" class="btn btn-default selectbtn" id="Paris" value="Paris - France" />
+                                </div>
+                                <div class="form-group">
+                                    @*<label style="visibility: hidden;"></label>*@
+                                    @Html.CheckBoxFor(m => m.MilanoRB, new { id = "MilanoRB", type = "checkbox", @style = "visibility: hidden;" })
+                                    <button type="button" class="btn btn-default selectbtn" id="Milano">Milano - İtaly</button>
+                                </div>
+                                
                             </div>
 
                             <div class="col-lg-2">
@@ -64,7 +80,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-danger" style="width: inherit; display: block; width: 100%;">Get An Offer</button>
+                                    <button type="submit" class="btn btn-danger" @*style="width: inherit; display: block; width: 100%;"*@>Get An Offer</button>
                                 </div>
                             </div>
                         </div>
@@ -78,3 +94,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $(".selectbtn").click(function () {
+            var rbId = this.id + "RB";
+            if (this.classList.contains("selected")) {
+                this.classList.remove("selected");
+                //$('#' + rbId).click();
+                $('#' + rbId).attr("checked", false);
+            }
+            else {
+                this.classList.add("selected");
+                $('#' + rbId).attr("checked", true);
+            }
+        });
+
+    });
+    
+</script>

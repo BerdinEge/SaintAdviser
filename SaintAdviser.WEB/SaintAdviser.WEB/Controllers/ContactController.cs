@@ -28,7 +28,7 @@ namespace SaintAdviser.WEB.Controllers
         {
             if (!ModelState.IsValid)
             {
-                //todo errors
+                return View(model);
             }
 
             Contact newContact = new Contact();

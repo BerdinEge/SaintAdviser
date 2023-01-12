@@ -30,12 +30,15 @@ namespace SaintAdviser.WEB.Controllers
             if (!ModelState.IsValid)
             {
                 //todo errors
+                return View("Index", model);
             }
 
             EuropeServiceRequest newEuropeServiceRequest = new EuropeServiceRequest();
             newEuropeServiceRequest.CompanyName = model.CompanyName;
             newEuropeServiceRequest.Email = model.Email;
             newEuropeServiceRequest.Phone = model.Phone;
+            string cities = "Frankfurt : " + model.FrankfurtRB.ToString() + ", Madrid : " + model.MadridRB.ToString() + ", Paris : " + model.ParisRB.ToString() + ", Milano : " + model.MilanoRB.ToString();
+            newEuropeServiceRequest.CityState = cities;
 
             EuropeServiceRequest res = _repEuropeServiceRequest.Insert(newEuropeServiceRequest);
 
