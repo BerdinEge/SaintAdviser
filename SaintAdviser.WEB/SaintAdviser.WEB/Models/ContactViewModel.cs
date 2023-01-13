@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaintAdviser.WEB.Models.DomesticServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,6 +10,14 @@ namespace SaintAdviser.WEB.Models
 {
     public class ContactViewModel
     {
+        public ContactViewModel()
+        {
+            this.ResearchPageData = new ResearchViewModel();
+            this.SellOnlinePageData = new SellOnlineViewModel();
+            this.DistributorshipPageData = new DistributorshipViewModel();
+            this.OperationsPageData = new OperationsViewModel();
+        }
+        public enContactType ContactType { get; set; } = enContactType.Contact;
         [Required]
         public string FullName { get; set; } = "asdasdas";
         [Required]
@@ -26,5 +35,10 @@ namespace SaintAdviser.WEB.Models
         public bool Policy { get; set; }
 
         //public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+        public ResearchViewModel ResearchPageData { get; set; }
+        public SellOnlineViewModel SellOnlinePageData { get; set; }
+        public DistributorshipViewModel DistributorshipPageData { get; set; }
+        public OperationsViewModel OperationsPageData { get; set; }
     }
 }

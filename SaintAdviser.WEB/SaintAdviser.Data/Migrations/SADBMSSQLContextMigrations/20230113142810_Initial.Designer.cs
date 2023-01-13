@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SaintAdviser.Data.SaintAdviserDB;
 
-namespace SaintAdviser.Data.Migrations.SADBMSSQLContext_Migrations
+namespace SaintAdviser.Data.Migrations.SADBMSSQLContextMigrations
 {
     [DbContext(typeof(SADBMSSQLContext))]
-    [Migration("20230111153256_Log")]
-    partial class Log
+    [Migration("20230113142810_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,6 +33,9 @@ namespace SaintAdviser.Data.Migrations.SADBMSSQLContext_Migrations
 
                     b.Property<string>("CompanyName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ContactType")
+                        .HasColumnType("int");
 
                     b.Property<int>("CountryCode")
                         .HasColumnType("int");

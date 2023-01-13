@@ -29,6 +29,13 @@ namespace SaintAdviser.Entity.Enums
             Error = 2,
             Exception = 3
         }
+
+        public enum enContactType
+        {
+            Contact = 0,
+            DomesticServiceRequest = 1,
+            EuropeServiceRequest = 2
+        }
     }
     
 }

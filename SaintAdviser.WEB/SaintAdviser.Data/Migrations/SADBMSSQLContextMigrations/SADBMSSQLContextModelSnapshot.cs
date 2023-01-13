@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SaintAdviser.Data.SaintAdviserDB;
 
-namespace SaintAdviser.Data.Migrations.SADBMSSQLContext_Migrations
+namespace SaintAdviser.Data.Migrations.SADBMSSQLContextMigrations
 {
     [DbContext(typeof(SADBMSSQLContext))]
     partial class SADBMSSQLContextModelSnapshot : ModelSnapshot
@@ -31,6 +31,9 @@ namespace SaintAdviser.Data.Migrations.SADBMSSQLContext_Migrations
 
                     b.Property<string>("CompanyName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ContactType")
+                        .HasColumnType("int");
 
                     b.Property<int>("CountryCode")
                         .HasColumnType("int");
