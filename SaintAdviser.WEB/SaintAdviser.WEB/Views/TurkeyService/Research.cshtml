@@ -14,7 +14,7 @@
         backface-visibility: hidden;
     }
 
-    .selected-image {
+    .selected-image .image {
         opacity: 0.3;
     }
 
@@ -40,6 +40,14 @@
     .image-container:hover .middle {
         opacity: 1;
     }
+
+    .selected-service-select-btn {
+        background-color: coral;
+    }
+
+    .selected-service-select-btn:hover {
+        background-color: coral;
+    }
 </style>
 <div class="text-center">
     <h1 class="display-4">Market Research</h1>
@@ -47,70 +55,96 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-3 image-container">
-            <a href="/TurkeyService/Research" class="card-href">
-                <div class="services-card image">
-                    <img class="img-fluid" src="~/img/SAimg/pexels-pixabay-53176.png" />
-                    <p>SECTOR & INDUSTRI</p>
-                </div>
-                <div class="middle">
-                    <div class="text">
-                        SectorIndustri
-                        <input type="button" class="btn btn-default service-select-btn" id="SectorIndustri" value="Select" />
+    <form asp-controller="Contact" asp-action="Research" method="post">
+        <div class="row">
+            <div class="col-md-3 image-container" id="SectorIndustriIC">
+                <a class="card-href">
+                    <div class="services-card image">
+                        <img class="img-fluid" src="~/img/SAimg/pexels-pixabay-53176.png" />
+                        <p>SECTOR & INDUSTRI</p>
                     </div>
-                    @Html.CheckBoxFor(m => m.SectorIndustri, new { id = "SectorIndustriRB", type = "checkbox", @style = "visibility: hidden;" })
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 image-container">
-            <a href="" class="card-href">
-                <div class="services-card image">
-                    <img class="img-fluid" src="~/img/SAimg/pexels-lina-kivaka-1524123.png" />
-                    <p>CUSTOMER PROFILE</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 image-container">
-            <a href="" class="card-href">
-                <div class="services-card image">
-                    <img class="img-fluid" src="~/img/SAimg/pexels-arnold-nagy-11463969.png" />
-                    <p>ADVERTISING COSTS</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 image-container">
-            <a href="" class="card-href">
-                <div class="services-card image">
-                    <img class="img-fluid" src="~/img/SAimg/pexels-leticia-ribeiro-2249249.png" />
-                    <p>SUPPLIER & WHOLESALE</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group">
-            <div class="form-group">
-                <button type="submit" class="btn btn-danger">Get An Offer</button>
+                    <div class="middle">
+                        <div class="text" style="font-size:small;">
+                            Find out all details about your business
+                            <input type="button" class="btn btn-default service-select-btn" id="SectorIndustri" value="Select" />
+                        </div>
+                        @Html.CheckBoxFor(m => m.SectorIndustri, new { id = "SectorIndustriRB", type = "checkbox", @style = "visibility: hidden;" })
+                    </div>
+                </a>
             </div>
-            <div class="form-group">
-                @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+            <div class="col-md-3 image-container" id="CustomerProfileIC">
+                <a class="card-href">
+                    <div class="services-card image">
+                        <img class="img-fluid" src="~/img/SAimg/pexels-lina-kivaka-1524123.png" />
+                        <p>CUSTOMER PROFILE</p>
+                    </div>
+                    <div class="middle">
+                        <div class="text" style="font-size:small;">
+                            Find out all details about your customers
+                            <input type="button" class="btn btn-default service-select-btn" id="CustomerProfile" value="Select" />
+                        </div>
+                        @Html.CheckBoxFor(m => m.CustomerProfile, new { id = "CustomerProfileRB", type = "checkbox", @style = "visibility: hidden;" })
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 image-container" id="AdvertisingCostsIC">
+                <a class="card-href">
+                    <div class="services-card image">
+                        <img class="img-fluid" src="~/img/SAimg/pexels-arnold-nagy-11463969.png" />
+                        <p>ADVERTISING COSTS</p>
+                    </div>
+                    <div class="middle">
+                        <div class="text" style="font-size:small;">
+                            Find out all details about your advertising costs
+                            <input type="button" class="btn btn-default service-select-btn" id="AdvertisingCosts" value="Select" />
+                        </div>
+                        @Html.CheckBoxFor(m => m.AdvertisingCosts, new { id = "AdvertisingCostsRB", type = "checkbox", @style = "visibility: hidden;" })
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 image-container" id="SupplierWholesaleIC">
+                <a class="card-href">
+                    <div class="services-card image">
+                        <img class="img-fluid" src="~/img/SAimg/pexels-leticia-ribeiro-2249249.png" />
+                        <p>SUPPLIER & WHOLESALE</p>
+                    </div>
+                    <div class="middle">
+                        <div class="text" style="font-size:small;">
+                            Find suppliers to improve your production process
+                            <input type="button" class="btn btn-default service-select-btn" id="SupplierWholesale" value="Select" />
+                        </div>
+                        @Html.CheckBoxFor(m => m.SupplierWholesale, new { id = "SupplierWholesaleRB", type = "checkbox", @style = "visibility: hidden;" })
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger">Get An Offer</button>
+                </div>
+                <div class="form-group">
+                    @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                </div>
+            </div>
+        </div>
+
+    </form>
 </div>
 
 <script>
     $(document).ready(function() {
         $(".service-select-btn").click(function () {
+            var icId = this.id + "IC";
             var rbId = this.id + "RB";
-            if (this.classList.contains("selected")) {
-                this.classList.remove("selected");
-                //$('#' + rbId).click();
+            if ($('#' + icId).hasClass('selected-image')) {
+                $('#' + this.id).removeClass('selected-service-select-btn');
+                $('#' + icId).removeClass('selected-image');
                 $('#' + rbId).attr("checked", false);
             }
             else {
-                this.classList.add("selected");
+                $('#' + this.id).addClass('selected-service-select-btn');
+                $('#' + icId).addClass('selected-image');
                 $('#' + rbId).attr("checked", true);
             }
         });

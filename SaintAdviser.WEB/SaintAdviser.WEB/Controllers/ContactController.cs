@@ -33,7 +33,15 @@ namespace SaintAdviser.WEB.Controllers
                 return View(model);
             }
         }
-        
+
+        public IActionResult Research(ResearchViewModel prevModel)
+        {
+            ContactViewModel model = new ContactViewModel();
+            model.ContactType = enContactType.DomesticServiceRequest;
+            model.ResearchPageData = prevModel;
+            return View("Index", model);
+        }
+
         public IActionResult SellOnline(SellOnlineViewModel prevModel)
         {
             ContactViewModel model = new ContactViewModel();
@@ -70,11 +78,19 @@ namespace SaintAdviser.WEB.Controllers
             newContact.FullName = model.FullName;
             newContact.Email = model.Email;
             newContact.Phone = model.Phone;
+            newContact.CompanyName = model.CompanyName;
+            if (!string.IsNullOrEmpty(model.Country))
+                newContact.Country = model.Country;
+            if (!string.IsNullOrEmpty(model.Region))
+                newContact.Region = model.Region;
+            if (!string.IsNullOrEmpty(model.City))
+                newContact.City = model.City;
+
             string ResearchPageData = JsonSerializer.Serialize(model.ResearchPageData);
             string SellOnlinePageData = JsonSerializer.Serialize(model.SellOnlinePageData);
             string DistributorshipPageData = JsonSerializer.Serialize(model.DistributorshipPageData);
             string OperationsPageData = JsonSerializer.Serialize(model.OperationsPageData);
-            newContact.Description = "ResearchPageData: " + ResearchPageData + ", SellOnlinePageData: " + SellOnlinePageData + ", DistributorshipPageData: " + DistributorshipPageData + ", OperationsPageData:  " + OperationsPageData;
+            newContact.Description = model.Description + " | " + "ResearchPageData: " + ResearchPageData + ", SellOnlinePageData: " + SellOnlinePageData + ", DistributorshipPageData: " + DistributorshipPageData + ", OperationsPageData:  " + OperationsPageData;
             Contact res = _repContact.Insert(newContact);
 
             Log log = new Log();

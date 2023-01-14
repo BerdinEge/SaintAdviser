@@ -26,8 +26,8 @@ namespace SaintAdviser.Data.Migrations.SADBMSSQLContextMigrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CityCode")
-                        .HasColumnType("int");
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CompanyName")
                         .HasColumnType("nvarchar(max)");
@@ -35,8 +35,8 @@ namespace SaintAdviser.Data.Migrations.SADBMSSQLContextMigrations
                     b.Property<int>("ContactType")
                         .HasColumnType("int");
 
-                    b.Property<int>("CountryCode")
-                        .HasColumnType("int");
+                    b.Property<string>("Country")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -54,6 +54,9 @@ namespace SaintAdviser.Data.Migrations.SADBMSSQLContextMigrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Region")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WebPage")

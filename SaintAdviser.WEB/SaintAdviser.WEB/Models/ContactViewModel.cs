@@ -17,20 +17,21 @@ namespace SaintAdviser.WEB.Models
             this.DistributorshipPageData = new DistributorshipViewModel();
             this.OperationsPageData = new OperationsViewModel();
         }
-        public enContactType ContactType { get; set; } = enContactType.Contact;
+        public enContactType ContactType { get; set; }
         [Required]
-        public string FullName { get; set; } = "asdasdas";
+        public string FullName { get; set; }
         [Required]
         public string Phone { get; set; }
         public string CompanyName { get; set; }
         [Required]
         public string Email { get; set; }
         public string WebPage { get; set; }
-        public int CountryCode { get; set; }
-        public int CityCode { get; set; }
+        public string Country { get; set; }
+        public string Region{ get; set; }
+        public string City { get; set; }
         public enDomesticServiceType? DomesticServiceType { get; set; }
         public string Description { get; set; }
-        public string AdditionalInformation { get; set; }
+        //public string AdditionalInformation { get; set; }
         [Required]
         public bool Policy { get; set; }
 

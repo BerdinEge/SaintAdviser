@@ -19,8 +19,9 @@ namespace SaintAdviser.Data.Migrations.SADBMSSQLContextMigrations
                     CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     WebPage = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CountryCode = table.Column<int>(type: "int", nullable: false),
-                    CityCode = table.Column<int>(type: "int", nullable: false),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Region = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DomesticServiceType = table.Column<int>(type: "int", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false)
