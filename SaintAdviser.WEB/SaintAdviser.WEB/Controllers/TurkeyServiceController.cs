@@ -12,5 +12,25 @@ namespace SaintAdviser.WEB.Controllers
         {
             return View();
         }
+
+        public IActionResult Research()
+        {
+            return View();
+        }
+
+        public IActionResult SellOnline()
+        {
+            return View();
+        }
+
+        public IActionResult Distributorship()
+        {
+            return View();
+        }
+
+        public IActionResult Operations()
+        {
+            return View();
+        }
     }
 }

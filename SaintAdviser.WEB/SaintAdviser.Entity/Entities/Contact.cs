@@ -10,6 +10,7 @@ namespace SaintAdviser.Entity.Entities
 {
     public class Contact : BaseEntity
     {
+        public enContactType ContactType { get; set; }
         public string FullName { get; set; }
         public string Phone { get; set; }
         public string CompanyName { get; set; }

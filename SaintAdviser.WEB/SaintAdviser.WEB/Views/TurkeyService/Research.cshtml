@@ -1,0 +1,120 @@
+﻿@model SaintAdviser.WEB.Models.DomesticServices.ResearchViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .selected-image {
+        opacity: 0.3;
+    }
+
+    .selected-image .middle {
+        opacity: 1;
+    }
+
+    .image-container:hover .image {
+        opacity: 0.3;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .image-container:hover .middle {
+        opacity: 1;
+    }
+</style>
+<div class="text-center">
+    <h1 class="display-4">Market Research</h1>
+    <hr />
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 image-container">
+            <a href="/TurkeyService/Research" class="card-href">
+                <div class="services-card image">
+                    <img class="img-fluid" src="~/img/SAimg/pexels-pixabay-53176.png" />
+                    <p>SECTOR & INDUSTRI</p>
+                </div>
+                <div class="middle">
+                    <div class="text">
+                        SectorIndustri
+                        <input type="button" class="btn btn-default service-select-btn" id="SectorIndustri" value="Select" />
+                    </div>
+                    @Html.CheckBoxFor(m => m.SectorIndustri, new { id = "SectorIndustriRB", type = "checkbox", @style = "visibility: hidden;" })
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 image-container">
+            <a href="" class="card-href">
+                <div class="services-card image">
+                    <img class="img-fluid" src="~/img/SAimg/pexels-lina-kivaka-1524123.png" />
+                    <p>CUSTOMER PROFILE</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 image-container">
+            <a href="" class="card-href">
+                <div class="services-card image">
+                    <img class="img-fluid" src="~/img/SAimg/pexels-arnold-nagy-11463969.png" />
+                    <p>ADVERTISING COSTS</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 image-container">
+            <a href="" class="card-href">
+                <div class="services-card image">
+                    <img class="img-fluid" src="~/img/SAimg/pexels-leticia-ribeiro-2249249.png" />
+                    <p>SUPPLIER & WHOLESALE</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Get An Offer</button>
+            </div>
+            <div class="form-group">
+                @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".service-select-btn").click(function () {
+            var rbId = this.id + "RB";
+            if (this.classList.contains("selected")) {
+                this.classList.remove("selected");
+                //$('#' + rbId).click();
+                $('#' + rbId).attr("checked", false);
+            }
+            else {
+                this.classList.add("selected");
+                $('#' + rbId).attr("checked", true);
+            }
+        });
+
+    });
+
+</script>
