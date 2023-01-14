@@ -1,15 +1,141 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-                <h1>KNOWLEDGE IS POWER</h1> 
-                <h3>SAINTADVISER BRAND IS CREATED BY FA COMPANY LLC.</h3>
-                <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                </p>
+
+<style>
+
+    .main {
+        padding-top: 50px;
+        min-height: 80%;
+    }
+
+    .main-text {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #161615;
+        line-height: 41px;
+        font-weight: normal;
+    }
+
+    .red {
+        color: #bf002a;
+    }
+
+    .main-button {
+        margin-top: 0px !important;
+    }
+
+    .services-button {
+        display: inline-block;
+        border-radius: 15px;
+        border: 1px solid #bf002a;
+        padding: 12px;
+        width: 220px;
+        color: #bf002a;
+        text-decoration: unset;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .services-button:hover {
+        color: #fff;
+        background-color: #bf002a;
+        transition: 0.5s;
+    }
+
+    .rslides {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+        border-radius: 15px 15px 15px 15px;
+        -moz-border-radius: 15px 15px 15px 15px;
+        -webkit-border-radius: 15px 15px 15px 15px;
+        border: 1px solid #777777;
+    }
+
+    .rslides li {
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+
+    .rslides img {
+        display: block;
+        height: auto;
+        float: left;
+        width: 100%;
+        border: none;
+    }
+
+</style>
+
+<section class="main index">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 main-sol">
+                <ul class="rslides">
+                    <li><img src="~/img/SAimg/slider1.jpg" alt=""></li>
+                    <li><img src="~/img/SAimg/slider2.jpg" alt=""></li>
+                    <li><img src="~/img/SAimg/slider3.jpg" alt=""></li>
+                    <li><img src="~/img/SAimg/slider4.jpg" alt=""></li>
+                    <li><img src="~/img/SAimg/slider5.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="col-md-6 my-auto">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-text">
+                            <p class="red">Knowledge is Power !</p>
+                            <p id="open">Find Out All The Details About Turkish Market.</p>
+                        </div>
+                        <div class="main-button">
+                            <a class="services-button" asp-area="" asp-controller="TurkeyService" asp-action="Index">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
     </div>
-</div>
+</section>
+
+<script>
+    jQuery(function ($) {
+        $(".rslides").responsiveSlides();
+    });
+    $(".rslides").responsiveSlides({
+        auto: true, // Boolean: Animate automatically, true or false
+        speed: 1000, // Integer: Speed of the transition, in milliseconds
+        timeout: 5000, // Integer: Time between slide transitions, in milliseconds
+        pager: false, // Boolean: Show pager, true or false
+        nav: false, // Boolean: Show navigation, true or false
+        random: false, // Boolean: Randomize the order of the slides, true or false
+        pause: false, // Boolean: Pause on hover, true or false
+        pauseControls: true, // Boolean: Pause when hovering controls, true or false
+        prevText: "Previous", // String: Text for the "previous" button
+        nextText: "Next", // String: Text for the "next" button
+        maxwidth: "", // Integer: Max-width of the slideshow, in pixels
+        navContainer: "", // Selector: Where controls should be appended to, default is after the 'ul'
+        manualControls: "", // Selector: Declare custom pager navigation
+        namespace: "rslides", // String: Change the default namespace used
+        before: function () { }, // Function: Before callback
+        after: function () { } // Function: After callback
+    });
+</script>
+<script src="~/js/responsiveslides.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

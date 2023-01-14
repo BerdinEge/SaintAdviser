@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="~/css/adminlte.min.css" rel="stylesheet" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1d061f2df5.js" crossorigin="anonymous"></script>
 
 
     <style>
@@ -20,13 +21,36 @@
         }
 
         .navbar-brand {
-            margin-left: 0px !important;
+            margin-left: 35px;
         }
 
         .navbar-brand img {
             max-width: 100%;
             height: 75px;
             display: block;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-link {
+            margin-top: 5px;
+            padding: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+            --bs-navbar-nav-link-padding-x: 1.3rem;
+            padding-right: 20px !important;
+        }
+
+        .nav-link:hover {
+            color: #bf002a !important;
+            transition: 0.5s !important;
+        }
+
+        a.nav-link {
+            box-shadow: inset 0 -1px 0 0 #bf002a;
         }
 
         .menu-element {
@@ -54,21 +78,48 @@
         .selectbtn:hover {
             /*background-color: #56d42d;*/
             background-color: orangered;
-            color: #000
+            color: #000;
         }
 
-        /*@@media (max-width:600px) {
+        .footer {
+            position: relative;
+            top : 45px;
+        }
+
+        @@media (max-width:600px) {
+
+            .navbar-brand {
+                margin-left: 0px;
+            }
+
             .navbar-brand img {
                 max-width: 100%;
+                /*width: auto;*/
                 height: 50px;
             }
-        }*/
+
+            .nav-link {
+                font-size: 14px !important;
+            }
+            .footer-copyright {
+                font-size: 12px;
+            }
+        }
+
+        .footer-copyright {
+            text-align: center;
+        }
+
+        .red {
+            color: #bf002a;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/SAimg/logo.png"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -108,32 +159,47 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <section class="footer border-top">
         <div class="container">
-                <div class="row">
-                    <p id="head" class="footer-text-element">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-copyright">
+                        <p class="f-bold">Falling Action Limited Liablity Company</p>
+                        <p class="f-italic">Suadiye, Bagdat Avenue, Mucahit Street, Ark399 Plaza B Block KADIKOY / ISTANBUL</p>
+                        <p class="red">Copyright ©2022 SAINTADVISER All Rights Reserved.</p>
+                        &copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        @*<footer class="border-top footer">
+            <div class="container">
+                <div class="row text-center">
+                    <p id="head" class="footer-text-element" style="font-weight:bold">
                         FALLING ACTION LIMITED LIABILITY COMPANY
                     </p>
                 </div>
                 <div class="row">
-                    <p id="text" class="footer-text-element">
+                    <p id="text" class="footer-text-element f-italic">
                         Suadiye, Bağdat Avenue, Mücahit Street, Ark399 Plaza B Block KADIKÖY / İSTANBUL
                     </p>
                 </div>
                 <div class="row">
-                    <p id="foot" class="footer-text-element">
+                    <p id="foot" class="footer-text-element red text-center">
                         Copyright 2023 SAINTADVISER All Rights Reserved
                     </p>
                 </div>
 
-                
-            
-            &copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+
+                &copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
