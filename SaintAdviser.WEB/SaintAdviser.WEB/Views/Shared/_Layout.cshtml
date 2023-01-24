@@ -34,6 +34,10 @@
             margin-left: auto;
         }
 
+        .navbar-light .navbar-nav .nav-link {
+            color: #000 !important;
+        }
+
         .nav-link {
             margin-top: 5px;
             padding: 5px;
@@ -44,7 +48,7 @@
             padding-right: 20px !important;
         }
 
-        .nav-link:hover {
+        .navbar-nav .nav-item .menu-element:hover {
             color: #bf002a !important;
             transition: 0.5s !important;
         }
@@ -84,6 +88,18 @@
         .footer {
             position: relative;
             top : 45px;
+            line-height : 10px;
+        }
+
+        .f-bold {
+            margin-top: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #161615;
+        }
+
+        .f-italic {
+            font-style : italic !important;
         }
 
         @@media (max-width:600px) {
@@ -143,22 +159,22 @@
                     </span>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link menu-element" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link menu-element" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="EuropeService" asp-action="Index">Europe Services</a>
+                            <a class="nav-link menu-element" asp-area="" asp-controller="EuropeService" asp-action="Index">Europe Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="TurkeyService" asp-action="Index">Turkey Services</a>
+                            <a class="nav-link menu-element" asp-area="" asp-controller="TurkeyService" asp-action="Index">Turkey Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="AboutUs" asp-action="Index">About Us</a>
+                            <a class="nav-link menu-element" asp-area="" asp-controller="AboutUs" asp-action="Index">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark menu-element" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                            <a class="nav-link menu-element" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -179,7 +195,7 @@
                         <p class="f-bold">Falling Action Limited Liablity Company</p>
                         <p class="f-italic">Suadiye, Bagdat Avenue, Mucahit Street, Ark399 Plaza B Block KADIKOY / ISTANBUL</p>
                         <p class="red">Copyright ©2022 SAINTADVISER All Rights Reserved.</p>
-                        &copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <p>&copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
                     </div>
                 </div>
             </div>
