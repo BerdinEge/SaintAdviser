@@ -4,8 +4,52 @@
 *@
 @{
 }
-<div class="text-center">
-    <h1 class="display-4">Distributorship</h1>
+
+<style>
+    .text-start {
+        text-align: left !important;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 27px;
+        margin-top: 6rem;
+        color: #000;
+    }
+
+    hr {
+        color: #bf002a !important;
+        font-weight: bold !important;
+        border-top: 1px solid;
+    }
+
+    .form-buttons {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: center;
+    }
+
+    .btn-danger {
+        background-color: #bf002a;
+        color: #fff;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    .form-check-input {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        height: 50% !important;
+        border-radius: 0 10px 0 10px;
+        border: 0.1px solid #80808070;
+    }
+</style>
+
+<div class="text-start">
+    <h5>Operations</h5>
     <hr />
 </div>
 
@@ -15,7 +59,15 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="form-group">
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32</p>
+                        <p>
+                            <strong>
+                                In this section, consultancy and advice about the operation you want to create for your business in Turkey are given.<br>
+                                For example, you want to rent a warehouse, office or a space for yourself, or you want to work with a proffesional sales team. Apart from these, you want to establishe a company, get legal consultancy or make an agreement with a proffesional and establish your operations in Turkey.
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        @Html.TextAreaFor(m => m.UserInput, new { id = "UserInputTA", placeholder = "Write us about what you need...." , @class = "form-check-input", @style = "width: 450px;" })
                     </div>
                 </div>
             </div>
@@ -23,19 +75,17 @@
                 <img class="img-fluid" src="~/img/SAimg/pexels-fauxels-3184653@2x.png" />
             </div>
         </div>
-        <div class="row">
+        @*<div class="row">
             <div class="form-group">
                 @Html.TextAreaFor(m => m.UserInput, new { id = "UserInputTA", @class = "form-check-input", @style = "width: 450px;" })
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
+        </div>*@
+        <div class="col-md-12 mt-5">
+            <div class="row form-buttons">
+                <div class="form-group">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-danger" @*style="width: 50%;"*@>Get An Offer</button>
+                        <button type="submit" class="btn btn-danger">Get An Offer</button>
                     </div>
-                </div>
-                <div class="row">
                     <div class="form-group">
                         @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
                     </div>

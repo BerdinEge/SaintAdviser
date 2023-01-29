@@ -4,8 +4,49 @@
 *@
 @{
 }
-<div class="text-center">
-    <h1 class="display-4">Market Research</h1>
+
+<style>
+    .form-buttons {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: center;
+    }
+
+    .text-start {
+        text-align: left !important;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 27px;
+        margin-top: 6rem;
+        color: #000;
+    }
+
+    p {
+        color: #161615;
+        font-size: 17px;
+    }
+
+    .btn-danger {
+        background-color: #bf002a;
+        color: #fff;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    hr {
+        color: #bf002a !important;
+        font-weight: bold !important;
+        border-top: 1px solid;
+    }
+</style>
+
+
+<div class="text-start">
+    <h5>Sell Online</h5>
     <hr />
 </div>
 
@@ -14,30 +55,46 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="services-card">
-                    <p>Choose your products</p>
-                    <p>Choose your products</p>
-                    <p>Choose your products</p>
-                    <p>Choose your products</p>
-                    <p>Choose your products</p>
-                    <p>Choose your products</p>
-                    <p>Choose your products</p>
+                    <p>
+                        <strong>
+                            * Choose your products that you want to sell online in Turkey.<br>
+                            * Sign and agreement with us.<br>
+                            * Send your products to our storage in Turkey with customs duty.<br>
+                            * When you get an order, notify us and we ship your order to the customer on behalf you.<br>
+                            * We notify you about your shipping process.<br>
+                            * You do not pay any tax for Turkish Government. No need prepare any paperwork.<br>
+                            Also we can help you to:
+                        </strong>
+                    </p>
 
-                    <p>@Html.CheckBoxFor(m => m.TranslateWebsite, new { id = "TranslateCB", @class = "form-check-input" }) Translate your website</p>
-                    <p>@Html.CheckBoxFor(m => m.Advertising, new { id = "AdvertisingCB", @class = "form-check-input" }) Advertising</p>
-                    <p>@Html.CheckBoxFor(m => m.SocialMedia, new { id = "SocialMediaCB", @class = "form-check-input" }) Social Media</p>
+                    <p><strong>@Html.CheckBoxFor(m => m.TranslateWebsite, new { id = "TranslateCB", @class = "form-check-input" }) Translate your website.</strong></p>
+                    <p><strong>@Html.CheckBoxFor(m => m.Advertising, new { id = "AdvertisingCB", @class = "form-check-input" }) Advertising works.</strong></p>
+                    <p><strong>@Html.CheckBoxFor(m => m.SocialMedia, new { id = "SocialMediaCB", @class = "form-check-input" }) Social Media communication with your Turkish customer.</strong></p>
 
+                </div>
+                @*<div class="form-group">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger" style="width: 50%;">Get An Offer</button>
                 </div>
                 <div class="form-group">
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-danger" style="width: 50%;">Get An Offer</button>
-                    </div>
-                    <div class="form-group">
-                        @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
-                    </div>
+                    @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
                 </div>
+            </div>*@
             </div>
             <div class="col-md-4">
                 <img class="img-fluid" src="~/img/SAimg/pexels-karolina-grabowska-4464_j.png" />
+            </div>
+            <div class="col-md-12 mt-5">
+                <div class="row form-buttons">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger">Get An Offer</button>
+                        </div>
+                        <div class="form-group">
+                            @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

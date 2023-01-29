@@ -4,8 +4,48 @@
 *@
 @{
 }
-<div class="text-center">
-    <h1 class="display-4">Distributorship</h1>
+
+<style>
+    .form-buttons {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: center;
+    }
+
+    .text-start {
+        text-align: left !important;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 27px;
+        margin-top: 6rem;
+        color: #000;
+    }
+
+    p {
+        color: #161615;
+        font-size: 17px;
+    }
+
+    .btn-danger {
+        background-color: #bf002a;
+        color: #fff;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    hr {
+        color: #bf002a !important;
+        font-weight: bold !important;
+        border-top: 1px solid;
+    }
+</style>
+
+<div class="text-start">
+    <h5>Distributorship</h5>
     <hr />
 </div>
 
@@ -14,23 +54,38 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="services-card">
-                    <p>@Html.CheckBoxFor(m => m.Option1, new { id = "Option1CB", @class = "form-check-input" }) OPTION - I</p>
-                    <p>Choose your productasdhjasşdjhasjdşasdhasşdjhasşdjashdjşasdhass</p>
+                    <p><strong>@Html.CheckBoxFor(m => m.Option1, new { id = "Option1CB", @class = "form-check-input" }) OPTION - I</strong></p>
+                    <p><strong>
+                        We will find Turkish companies also Turkish local brands which are run related business with you and share their information.<br>
+                        We will also research affiliate options where you can sell items in their stores and share their information.</strong>
+                    </p>
 
-                    <p>@Html.CheckBoxFor(m => m.Option2, new { id = "Option2CB", @class = "form-check-input" }) OPTION - II</p>
-                    <p>Choose your products productasdhjasşdjhasjdşasdhasşdjhasşdjashdjşasdhass productasdhjasşdjhasjdşasdhasşdjhasşdjashdjşasdhass productasdhjasşdjhasjdşasdhasşdjhasşdjashdjşasdhass</p>
+                    <p><strong>@Html.CheckBoxFor(m => m.Option2, new { id = "Option2CB", @class = "form-check-input" }) OPTION - II</strong></p>
+                    <p><strong>Addition to option - I,we manage your distributorship process with our team in Turkey. We learn about your product details from you and present it your potential distributorships.</strong></p>
+                </div>
+                @*<div class="form-group">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger" style="width: 50%;">Get An Offer</button>
                 </div>
                 <div class="form-group">
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-danger" style="width: 50%;">Get An Offer</button>
-                    </div>
-                    <div class="form-group">
-                        @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
-                    </div>
+                    @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
                 </div>
+            </div>*@
             </div>
             <div class="col-md-4">
                 <img class="img-fluid" src="~/img/SAimg/pexels-eunice-lui-928215@2x.png" />
+            </div>
+            <div class="col-md-12 mt-5">
+                <div class="row form-buttons">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger">Get An Offer</button>
+                        </div>
+                        <div class="form-group">
+                            @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

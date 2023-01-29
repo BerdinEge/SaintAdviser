@@ -5,6 +5,11 @@
 @{
 }
 <style>
+
+    body {
+        text-align: center;
+    }
+
     .image {
         opacity: 1;
         display: block;
@@ -34,7 +39,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        text-align: center;
+/*        text-align: center;*/
     }
 
     .image-container:hover .middle {
@@ -48,9 +53,73 @@
     .selected-service-select-btn:hover {
         background-color: coral;
     }
+
+    .service-select-btn {
+        background-color: #bf002a;
+        color: #fff;
+        margin-top: 50%;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    .text-in-services {
+        font-size: 15px !important;
+        font-weight: bold;
+    }
+
+    .btn-default:hover {
+        background-color: #fff;
+        color: #bf002a;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 27px;
+        margin-top: 6rem;
+        color: #000;
+    }
+
+    .col-md-3 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        text-align: center !important;
+    }
+
+    hr {
+        color: #bf002a !important;
+        font-weight: bold !important;
+        border-top: 1px solid;
+    }
+
+    .text-start {
+        text-align: left !important;
+    }
+
+    .cards-bottom-text {
+        margin-top: 3%;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .form-buttons {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: center;
+    }
+
+    .btn-danger {
+        background-color: #bf002a;
+        color: #fff;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
 </style>
-<div class="text-center">
-    <h1 class="display-4">Market Research</h1>
+<div class="text-start">
+    <h5>Market Research</h5>
     <hr />
 </div>
 
@@ -61,10 +130,10 @@
                 <a class="card-href">
                     <div class="services-card image">
                         <img class="img-fluid" src="~/img/SAimg/pexels-pixabay-53176.png" />
-                        <p>SECTOR & INDUSTRI</p>
+                        <p class="cards-bottom-text">SECTOR & INDUSTRY</p>
                     </div>
                     <div class="middle">
-                        <div class="text" style="font-size:small;">
+                        <div class="text text-center text-in-services">
                             Find out all details about your business
                             <input type="button" class="btn btn-default service-select-btn" id="SectorIndustri" value="Select" />
                         </div>
@@ -76,10 +145,10 @@
                 <a class="card-href">
                     <div class="services-card image">
                         <img class="img-fluid" src="~/img/SAimg/pexels-lina-kivaka-1524123.png" />
-                        <p>CUSTOMER PROFILE</p>
+                        <p class="cards-bottom-text">CUSTOMER PROFILE</p>
                     </div>
                     <div class="middle">
-                        <div class="text" style="font-size:small;">
+                        <div class="text text-center text-in-services">
                             Find out all details about your customers
                             <input type="button" class="btn btn-default service-select-btn" id="CustomerProfile" value="Select" />
                         </div>
@@ -91,10 +160,10 @@
                 <a class="card-href">
                     <div class="services-card image">
                         <img class="img-fluid" src="~/img/SAimg/pexels-arnold-nagy-11463969.png" />
-                        <p>ADVERTISING COSTS</p>
+                        <p class="cards-bottom-text">ADVERTISING COSTS</p>
                     </div>
                     <div class="middle">
-                        <div class="text" style="font-size:small;">
+                        <div class="text text-center text-in-services">
                             Find out all details about your advertising costs
                             <input type="button" class="btn btn-default service-select-btn" id="AdvertisingCosts" value="Select" />
                         </div>
@@ -106,10 +175,10 @@
                 <a class="card-href">
                     <div class="services-card image">
                         <img class="img-fluid" src="~/img/SAimg/pexels-leticia-ribeiro-2249249.png" />
-                        <p>SUPPLIER & WHOLESALE</p>
+                        <p class="cards-bottom-text">SUPPLIER & WHOLESALE</p>
                     </div>
                     <div class="middle">
-                        <div class="text" style="font-size:small;">
+                        <div class="text text-center text-in-services">
                             Find suppliers to improve your production process
                             <input type="button" class="btn btn-default service-select-btn" id="SupplierWholesale" value="Select" />
                         </div>
@@ -118,17 +187,18 @@
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="form-group">
+        <div class="col-md-12 mt-5">
+            <div class="row form-buttons">
                 <div class="form-group">
-                    <button type="submit" class="btn btn-danger">Get An Offer</button>
-                </div>
-                <div class="form-group">
-                    @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-danger">Get An Offer</button>
+                    </div>
+                    <div class="form-group">
+                        @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                    </div>
                 </div>
             </div>
         </div>
-
     </form>
 </div>
 
