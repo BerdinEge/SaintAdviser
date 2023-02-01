@@ -16,6 +16,7 @@ namespace SaintAdviser.WEB.Models
             this.SellOnlinePageData = new SellOnlineViewModel();
             this.DistributorshipPageData = new DistributorshipViewModel();
             this.OperationsPageData = new OperationsViewModel();
+            this.FinancialPageData = new FinancialViewModel();
         }
         public enContactType ContactType { get; set; }
         [Required]
@@ -41,5 +42,6 @@ namespace SaintAdviser.WEB.Models
         public SellOnlineViewModel SellOnlinePageData { get; set; }
         public DistributorshipViewModel DistributorshipPageData { get; set; }
         public OperationsViewModel OperationsPageData { get; set; }
+        public FinancialViewModel FinancialPageData { get; set; }
     }
 }

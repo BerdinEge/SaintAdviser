@@ -19,7 +19,7 @@
     h5 {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 27px;
+        font-size: 19px;
         margin-top: 6rem;
         color: #000;
     }
@@ -67,9 +67,9 @@
                         </strong>
                     </p>
 
-                    <p><strong>@Html.CheckBoxFor(m => m.TranslateWebsite, new { id = "TranslateCB", @class = "form-check-input" }) Translate your website.</strong></p>
-                    <p><strong>@Html.CheckBoxFor(m => m.Advertising, new { id = "AdvertisingCB", @class = "form-check-input" }) Advertising works.</strong></p>
-                    <p><strong>@Html.CheckBoxFor(m => m.SocialMedia, new { id = "SocialMediaCB", @class = "form-check-input" }) Social Media communication with your Turkish customer.</strong></p>
+                    <p><strong>@Html.CheckBoxFor(m => m.TranslateWebsite, new { id = "TranslateCB"@*, @class = "form-check-input"*@ }) Translate your website.</strong></p>
+                    <p><strong>@Html.CheckBoxFor(m => m.Advertising, new { id = "AdvertisingCB"@*, @class = "form-check-input"*@ }) Advertising works.</strong></p>
+                    <p><strong>@Html.CheckBoxFor(m => m.SocialMedia, new { id = "SocialMediaCB"@*, @class = "form-check-input"*@ }) Social Media communication with your Turkish customer.</strong></p>
 
                 </div>
                 @*<div class="form-group">
@@ -91,7 +91,7 @@
                             <button type="submit" class="btn btn-danger">Get An Offer</button>
                         </div>
                         <div class="form-group">
-                            @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                            <a href="https://outlook.office365.com/owa/calendar/MeetwithSaintadviser@saintadviser.onmicrosoft.com/bookings/" target="_blank" class="meeting">Set an appointment</a>
                         </div>
                     </div>
                 </div>

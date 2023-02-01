@@ -32,5 +32,10 @@ namespace SaintAdviser.WEB.Controllers
         {
             return View();
         }
+
+        public IActionResult Financial()
+        {
+            return View();
+        }
     }
 }
