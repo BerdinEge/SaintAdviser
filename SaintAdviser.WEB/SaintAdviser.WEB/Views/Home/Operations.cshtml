@@ -1,0 +1,101 @@
+﻿@model SaintAdviser.WEB.Models.DomesticServices.OperationsViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .form-buttons {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: center;
+    }
+
+    .text-start {
+        text-align: left !important;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 19px;
+        margin-top: 6rem;
+        color: #000;
+    }
+
+    p {
+        color: #161615;
+        font-size: 17px;
+    }
+
+    .btn-danger {
+        background-color: #bf002a;
+        color: #fff;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    hr {
+        color: #bf002a !important;
+        font-weight: bold !important;
+        border-top: 1px solid;
+    }
+</style>
+
+<div class="text-start">
+    <h5>START UP FİNANSALLARI</h5>
+    <hr />
+</div>
+
+<div class="container">
+    <form asp-controller="Contact" asp-action="Operations" method="post">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="services-card">
+                    <p>
+                        <strong>
+                            Türkiye’de her geçen gün genişleyen bir start up ekosistemi bulunuyor. Özellikle son yıllarda büyük
+                            Artış gösteren bu ekosistem içerisinde bir çok yatırım alan girişim başarısız oldu. Bu durumun bir çok
+                            sebebi olabilir.<br>
+                            Biz Saintadviser Markası olarak bu sebeplerden sadece bir kaçına odaklandık ve bu konuda Start up
+                            Ekosistemine katkı sağlama hedefindeyiz.<br>
+                            Bir Start up şirketi sahibi olmanız için belki de bu günlerde finans bilmenize gerek yok gibi görünebilir,
+                            ancak gerçeklik şudur ki; bir girişimci finans muhasebe, bütçe ve raporlama bilmek zorundadır.
+                            Bu detaylarlara hakimseniz şirketinizin geleceğine yön verebilir ve tüm detaylara hakim olabilirsiniz.
+                            Start up hizmetlerimiz arasında, business plan hazırlığı, bütçe hazırlığı, yatırım almak için hazırlanması
+                            gereken finansal tablolar gibi önemli çalışmalar bulunmakta.<br>
+                            Bununla birlikte finansal süreçlerle ilgili bizim tecrübelerimizden faydalanıp bir eğitim de alabilirsiniz.
+                            Start up şirketinizle alakalı olarak tüm finansal süreçleri konuşup tartışmak adına aşağıdaki butona
+                            Tıklayarak bizlere bilgilerinizi bırakırsanız, sizi aramaktan büyük mutluluk duyacağız.
+                        </strong>
+                    </p>
+                </div>
+                @*<div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger" style="width: 50%;">Get An Offer</button>
+                        </div>
+                        <div class="form-group">
+                            @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                        </div>
+                    </div>*@
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="~/img/SAimg/pexels-fauxels-3184653@2x.png" />
+            </div>
+            <div class="col-md-12 mt-5">
+                <div class="row form-buttons">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger">Teklif Al</button>
+                        </div>
+                        <div class="form-group">
+                            <a href="https://outlook.office365.com/owa/calendar/MeetwithSaintadviser@saintadviser.onmicrosoft.com/bookings/" target="_blank" class="meeting">Toplantı düzenle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
