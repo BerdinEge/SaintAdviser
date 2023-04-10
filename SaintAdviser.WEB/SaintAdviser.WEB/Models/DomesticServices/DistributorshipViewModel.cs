@@ -7,7 +7,6 @@ namespace SaintAdviser.WEB.Models.DomesticServices
 {
     public class DistributorshipViewModel
     {
-        public bool Option1 { get; set; } = false;
-        public bool Option2 { get; set; } = false;
+
     }
 }

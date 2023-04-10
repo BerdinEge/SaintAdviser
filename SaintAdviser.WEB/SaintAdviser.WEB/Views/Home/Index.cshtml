@@ -1,141 +1,75 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
 
 <style>
 
-    .main {
-        padding-top: 50px;
-        min-height: 80%;
+    .services-row {
+        margin-top: 70px;
     }
 
-    .main-text {
-        text-align: left;
+    .services-text-row {
+        font-size: 16px;
+        margin-top: 70px;
+        color: #bf002a;
+    }
+
+    .services-font {
         text-transform: uppercase;
-        font-size: 30px;
-        color: #161615;
-        line-height: 41px;
-        font-weight: normal;
-    }
-
-    .red {
-        color: #bf002a;
-    }
-
-    .main-button {
-        margin-top: 0px !important;
-    }
-
-    .services-button {
-        display: inline-block;
-        border-radius: 15px;
-        border: 1px solid #bf002a;
-        padding: 12px;
-        width: 220px;
-        color: #bf002a;
-        text-decoration: unset;
-        text-align: center;
         font-weight: bold;
-        margin-top: 20px;
+        font-size: 13px;
+        /* margin-top: 6rem;*/
+        color: #000;
     }
-
-    .services-button:hover {
-        color: #fff;
-        background-color: #bf002a;
-        transition: 0.5s;
-    }
-
-    .rslides {
-        position: relative;
-        list-style: none;
-        overflow: hidden;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.7);
-        border-radius: 15px 15px 15px 15px;
-        -moz-border-radius: 15px 15px 15px 15px;
-        -webkit-border-radius: 15px 15px 15px 15px;
-        border: 1px solid #777777;
-    }
-
-    .rslides li {
-        position: absolute;
-        display: none;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-
-    .rslides li:first-child {
-        position: relative;
-        display: block;
-        float: left;
-    }
-
-    .rslides img {
-        display: block;
-        height: auto;
-        float: left;
-        width: 100%;
-        border: none;
-    }
-
 </style>
 
-<section class="main index">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 main-sol">
-                <ul class="rslides">
-                    <li><img src="~/img/SAimg/slider1.png" alt=""></li>
-                    <li><img src="~/img/SAimg/slider2.png" alt=""></li>
-                    <li><img src="~/img/SAimg/slider3.png" alt=""></li>
-                    <li><img src="~/img/SAimg/slider4.png" alt=""></li>
-                    <li><img src="~/img/SAimg/slider5.png" alt=""></li>
-                </ul>
-            </div>
-            <div class="col-md-6 my-auto">
-                <div class="container">
-                    <div class="row">
-                        <div class="main-text">
-                            <p class="red">Knowledge is Power !</p>
-                            <p id="open">Find Out All The Details About Turkish Market.</p>
-                        </div>
-                        <div class="main-button">
-                            <a class="services-button" asp-area="" asp-controller="TurkeyService" asp-action="Index">Our Services</a>
-                        </div>
+<div class="text-center">
+    <h6 class="services-text-row">Doğru finansal temeller ve doğru finansal Kararlar için hizmetlerimiz;</h6>
+</div>
+
+<div class="container">
+    <div class="row text-center services-row">
+        @*<div class="col-md-3">
+                <a href="/TurkeyService/Research" class="card-href">
+                    <div class="services-card">
+                        <h6 class="services-font">MARKET RESEARCH</h6>
+                        <img class="img-fluid" src="~/img/SAimg/pexels-cottonbro-4861373.png"/>
                     </div>
+                </a>
+            </div>*@
+        <div class="col-md-3">
+            <a href="/Home/Financial" class="card-href">
+                <div class="services-card">
+                    <h6 class="services-font">FİNANSAL PLANLAMA</h6>
+                    <img class="img-fluid" src="~/img/SAimg/florence-cathedral-santa-maria.png" />
                 </div>
-            </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="/Home/SellOnline" class="card-href">
+                <div class="services-card">
+                    <h6 class="services-font">BÜTÇE VE RAPORLAMA</h6>
+                    <img class="img-fluid" src="~/img/SAimg/pexels-karolina-grabowska-4464.png" />
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="/Home/Distributorship" class="card-href">
+                <div class="services-card">
+                    <h6 class="services-font">FİNANSAL KONTROL VE ANALİZ</h6>
+                    <img class="img-fluid" src="~/img/SAimg/pexels-eunice-lui-928215.png" />
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="/Home/Operations" class="card-href">
+                <div class="services-card">
+                    <h6 class="services-font">START-UP FİNANSALLARI</h6>
+                    <img class="img-fluid" src="~/img/SAimg/pexels-fauxels-3184653.png" />
+                </div>
+            </a>
         </div>
     </div>
-</section>
-
-<script>
-    jQuery(function ($) {
-        $(".rslides").responsiveSlides();
-    });
-    $(".rslides").responsiveSlides({
-        auto: true, // Boolean: Animate automatically, true or false
-        speed: 1000, // Integer: Speed of the transition, in milliseconds
-        timeout: 5000, // Integer: Time between slide transitions, in milliseconds
-        pager: false, // Boolean: Show pager, true or false
-        nav: false, // Boolean: Show navigation, true or false
-        random: false, // Boolean: Randomize the order of the slides, true or false
-        pause: false, // Boolean: Pause on hover, true or false
-        pauseControls: true, // Boolean: Pause when hovering controls, true or false
-        prevText: "Previous", // String: Text for the "previous" button
-        nextText: "Next", // String: Text for the "next" button
-        maxwidth: "", // Integer: Max-width of the slideshow, in pixels
-        navContainer: "", // Selector: Where controls should be appended to, default is after the 'ul'
-        manualControls: "", // Selector: Declare custom pager navigation
-        namespace: "rslides", // String: Change the default namespace used
-        before: function () { }, // Function: Before callback
-        after: function () { } // Function: After callback
-    });
-</script>
-<script src="~/js/responsiveslides.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</div>

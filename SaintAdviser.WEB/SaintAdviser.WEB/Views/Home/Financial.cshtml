@@ -1,0 +1,103 @@
+﻿@model SaintAdviser.WEB.Models.DomesticServices.FinancialViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<style>
+    .form-buttons {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        justify-content: center;
+    }
+
+    .text-start {
+        text-align: left !important;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 19px;
+        margin-top: 6rem;
+        color: #000;
+    }
+
+    p {
+        color: #161615;
+        font-size: 17px;
+    }
+
+    .btn-danger {
+        background-color: #bf002a;
+        color: #fff;
+        border: 5px 0;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+
+    hr {
+        color: #bf002a !important;
+        font-weight: bold !important;
+        border-top: 1px solid;
+    }
+</style>
+
+<div class="text-start">
+    <h5>FİNANSAL PLANLAMA</h5>
+    <hr />
+</div>
+
+<div class="container">
+    <form asp-controller="Contact" asp-action="Financial" method="post">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="services-card">
+                    <p>
+                        <strong>
+                            Finansal planlama; şirketlerin finansal anlamda işleyişlerinin planlanması,  gelecek öngörüleri,
+                            yapılacak yatırımlar, anlık alınması gereken kararlar konusunda oldukça büyük önem taşımaktadır.
+                            Şirketin bulunduğu sektöre ve gider kalemlerine göre doğru bir mizan kullanımı, bu doğru mizan
+                            ile yapılacak doğru raporlama çalışmaları, şirketlere gelecekte sağlayacağı gelirleri net bir şekilde
+                            göstermekle kalmaz, bununla beraber şirketlerin anlık olağan dışı durumlara nasıl tepki vermesi
+                            gerektiği konusunda da rehberlik eder.<br>
+                            Biz Saintadviser markası olarak, şirketlerin finansal planlamasını, tamamen şirketin bulunduğu
+                            sektöre göre yeniden dizayn edip, bu konuda doğru ve eksiksiz bir yapılanmaya gitmelerini
+                            sağlıyoruz. Bu şekilde, şirketler tüm ay boyunca gerçekleşen para alış verişi, gelirler ve giderler
+                            konusunda şeffaf bir raporlama setine sahip olup, aylık raporlamalarına bakarak şirketlerinin
+                            geleceklerine daha rahat yön verebiliyorlar.<br>
+                            Mizan düzeni, üretim maliyetleri, operasyonel giderler, EBIT ve EBITDA gibi tüm konuları
+                            incelediğimiz bu hizmetimiz için aşağıdaki butona tıklayarak bize bilgilerinizi bırakırsanız, sizi
+                            aramaktan ve bu konuları detaylı bir şekilde konuşmaktan mutluluk duyacağız.
+                        </strong>
+                    </p>
+
+                </div>
+                @*<div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger" style="width: 50%;">Get An Offer</button>
+                        </div>
+                        <div class="form-group">
+                            @Html.ActionLink("Set an appointment", "index", "Home", new { @class = "form-control" }, new { @style = "color: #DC143C;" })
+                        </div>
+                    </div>*@
+            </div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="~/img/SAimg/florence-cathedral-santa-maria.png" />
+            </div>
+            <div class="col-md-12 mt-5">
+                <div class="row form-buttons">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger">Teklif Al</button>
+                        </div>
+                        <div class="form-group">
+                            <a href="https://outlook.office365.com/owa/calendar/MeetwithSaintadviser@saintadviser.onmicrosoft.com/bookings/" target="_blank" class="meeting">Toplantı düzenle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

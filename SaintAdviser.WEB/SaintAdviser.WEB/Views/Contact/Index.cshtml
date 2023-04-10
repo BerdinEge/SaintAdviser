@@ -49,7 +49,7 @@
 
 
 <div class="text-center">
-    <h5>Enter & Select Information</h5>
+    <h5>Lütfen Bilgilerinizi Giriniz</h5>
 </div>
 <div class="container">
     <div class="row">
@@ -77,23 +77,23 @@
                                 <div class="row">
                                     <div class="col-lg-6 text-center">
                                         <div class="form-group form-group-element">
-                                            <label for="FullNameTB">Full Name</label>
-                                            @Html.TextBoxFor(m => m.FullName, new { type = "text", id = "FullNameTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important; ", placeholder = "Enter Full Name*" })
+                                            <label for="FullNameTB">Ad Soyad</label>
+                                            @Html.TextBoxFor(m => m.FullName, new { type = "text", id = "FullNameTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;" })
                                         </div>
 
                                         <div class="form-group form-group-element" @*style="width: 80%; padding-left: 10%;"*@>
-                                            <label for="PhoneTB">Phone Number</label>
-                                            @Html.TextBoxFor(m => m.Phone, new { type = "text", id = "PhoneTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important; ", placeholder = "Enter Phone Number*" })
+                                            <label for="PhoneTB">Telefon Numarası</label>
+                                            @Html.TextBoxFor(m => m.Phone, new { type = "text", id = "PhoneTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important; " })
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="CompanyNameTB">Company Name</label>
-                                            @Html.TextBoxFor(m => m.CompanyName, new { type = "text", id = "CompanyNameTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;  ", placeholder = "Enter Company Name*" })
+                                            <label for="CompanyNameTB">Şirket Adı</label>
+                                            @Html.TextBoxFor(m => m.CompanyName, new { type = "text", id = "CompanyNameTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;  " })
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="EmailTB">Email address</label>
-                                            @Html.TextBoxFor(m => m.Email, new { type = "email", id = "EmailTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;  ", placeholder = "Enter E-mail*" })
+                                            <label for="EmailTB">E-mail Adresi</label>
+                                            @Html.TextBoxFor(m => m.Email, new { type = "email", id = "EmailTB", @class = "form-control ", @style = "border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;  " })
                                         </div>
 
                                     </div>
@@ -101,19 +101,19 @@
                                     <div class="col-lg-6 text-center">
 
                                         <div class="form-group">
-                                            <label for="country">Country</label>
+                                            <label for="country">Ülke</label>
                                             <!-- country -->
                                             <select id="country" class='form-control selectpicker' data-live-search='true' style="border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;"><option value=""></option></select>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="region">Region</label>
+                                            <label for="region">Şehir</label>
                                             <!-- region -->
                                             <select id="region" class='form-control' style="border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;"><option value=""></option></select>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="city">City</label>
+                                            <label for="city">İlçe</label>
                                             <!-- city -->
                                             <select id="city" class='form-control' style="border: 2px solid #111212 !important; border-radius: 50px !important; text-align: center; font-size: 14px; font-weight: bold; color: #000000 !important;"><option value=""></option></select>
                                         </div>
@@ -127,15 +127,15 @@
                                             @*<input type="checkbox" class="form-check-input" id="exampleCheck1">*@
                                             @Html.CheckBoxFor(m => m.Policy, new { id = "PolicyCB", @class = "form-check-input" })
                                             <a href="~/img/pdpl.pdf" class="text-policy f-italic" target="_blank">
-                                                Policy For The Protection Of Data
+                                                KVKK Metni
                                                 <label class="form-check-label" for="PolicyCB"></label>
                                             </a>
                                         </div>
                                         <div class="form-group" @*class="card-footer"*@>
-                                            <button type="submit" class="btn btn-danger">Get An Offer</button>
+                                            <button type="submit" class="btn btn-danger">Teklif Al</button>
                                         </div>
                                         <div class="form-group text-center">
-                                            <a href="https://outlook.office365.com/owa/calendar/MeetwithSaintadviser@saintadviser.onmicrosoft.com/bookings/" target="_blank" class="meeting">Set an appointment</a>
+                                            <a href="https://outlook.office365.com/owa/calendar/MeetwithSaintadviser@saintadviser.onmicrosoft.com/bookings/" target="_blank" class="meeting">Toplantı düzenle</a>
                                             @*@Html.ActionLink("Set an appointment", "index", "Contact", new { @class = "form-control meeting" }, new { @style = "color: #DC143C;" })*@
                                         </div>
                                     </div>
@@ -159,8 +159,6 @@
                     @Html.HiddenFor(m => m.SellOnlinePageData.TranslateWebsite)
                     @Html.HiddenFor(m => m.SellOnlinePageData.Advertising)
                     @Html.HiddenFor(m => m.SellOnlinePageData.SocialMedia)
-                    @Html.HiddenFor(m => m.DistributorshipPageData.Option1)
-                    @Html.HiddenFor(m => m.DistributorshipPageData.Option2)
                     @Html.HiddenFor(m => m.OperationsPageData.UserInput)
                     @Html.HiddenFor(m => m.Country, new { id = "CountryHidden" })
                     @Html.HiddenFor(m => m.Region, new { id = "RegionHidden" })
@@ -207,7 +205,7 @@
                 "&callback=?";
             $.getJSON(url, function (data) {
                 $("#region option").remove();
-                $('#region').append('<option value="">Please select your region</option>');
+                $('#region').append('<option value="">Seçiniz</option>');
                 $.each(data, function (index, value) {
                     // APPEND OR INSERT DATA TO SELECT ELEMENT.
                     $("#region").append(
@@ -233,7 +231,7 @@
             $.getJSON(url, function (data) {
                 console.log(data);
                 $("#city option").remove();
-                $('#city').append('<option value="">Please select your city</option>');
+                $('#city').append('<option value="">Seçiniz</option>');
                 $.each(data, function (index, value) {
                     // APPEND OR INSERT DATA TO SELECT ELEMENT.
                     $("#city").append(
