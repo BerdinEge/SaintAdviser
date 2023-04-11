@@ -10,12 +10,17 @@
     }
 
     .main-text {
+        font-family: 
         text-align: left;
         text-transform: uppercase;
         font-size: 30px;
         color: #161615;
         line-height: 41px;
         font-weight: normal;
+    }
+
+    .main-sub-text {
+        font-size: 27px !important;
     }
 
     .red {
@@ -83,6 +88,11 @@
         border: none;
     }
 
+    .inner {
+        width: 50%;
+        margin: 0 auto;
+    }
+
 </style>
 
 <section class="main index">
@@ -101,11 +111,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="main-text">
-                            <p class="red">Knowledge is Power !</p>
-                            <p id="open">Find Out All The Details About Turkish Market.</p>
+                            <p class="red" style="text-align: center;">Knowledge is Power...</p>
+                            <p id="open" class="main-sub-text" style="text-align: center;">STRONG FINANCIAL FUNDAMENTALS</p>
+                            <p id="open" class="main-sub-text" style="text-align: center;">&</p>
+                            <p id="open" class="main-sub-text" style="text-align: center;">OPEN YOUR BUSINESS TO THE TURKISH MARKET</p>
                         </div>
-                        <div class="main-button">
-                            <a class="services-button" asp-area="" asp-controller="TurkeyService" asp-action="Index">Our Services</a>
+                        <div class="main-button row" style="width: 547.5px;">
+                                <a class="services-button inner resp-button" style="margin-left:auto; margin-right: auto;" asp-area="" asp-controller="TurkeyService" asp-action="Index">Our Services</a>
+                            
                         </div>
                     </div>
                 </div>

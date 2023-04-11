@@ -78,7 +78,7 @@ namespace SaintAdviser.WEB.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                return View("Index", model);
             }
 
             Contact newContact = new Contact();

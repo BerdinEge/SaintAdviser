@@ -115,7 +115,17 @@
             font-style : italic !important;
         }
 
-        @@media (max-width:600px) {
+        @@media (max-width:500px){
+            .text-cover {
+                height: 530px !important;
+            }
+        }
+
+        @@media (max-width:768px) {
+
+            .footer-adress {
+                font-size: 8px !important;
+            }
 
             .navbar-brand {
                 margin-left: 0px;
@@ -144,6 +154,14 @@
             }
             .footer-copyright {
                 font-size: 12px;
+            }
+
+            .resp-button {
+                width: 90% !important;
+            }
+
+            .form-group-offer {
+                width: 100% !important;
             }
         }
         
@@ -207,9 +225,10 @@
                 <div class="row text-center justify-content-center">
                     <div class="footer-copyright">
                         <p class="f-bold">Falling Action Limited Liablity Company</p>
-                        <p class="f-italic">Suadiye, Bagdat Avenue, Mucahit Street, Ark399 Plaza B Block KADIKOY / ISTANBUL</p>
-                        <p class="red">Copyright ©2022 SAINTADVISER All Rights Reserved.</p>
-                        <p>&copy; 2023 - SaintAdviser.WEB - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+                        <p class="f-italic footer-adress">Suadiye, Bagdat Avenue, Mucahit Street, Ark399 Plaza B Block KADIKOY / ISTANBUL</p>
+                        @*<p class="f-italic"></p>*@
+                        <p class="f-bold">info@saintadviser.com</p>
+                        <p class="red">Copyright ©2023 SAINTADVISER All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
